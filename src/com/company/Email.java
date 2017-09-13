@@ -19,4 +19,14 @@ public class Email extends Notification {
     public String getSmtpProvider() {
         return smtpProvider;
     }
+
+    @Override
+    public void transport() throws NoTransportException {
+        // super.transport(); do I need this?
+        System.out.println(super.getCreatedAt());
+        System.out.println(super.getSubject());
+        System.out.println(super.getBody());
+        System.out.println(getRecipient());
+        System.out.println(getSmtpProvider());
+    }
 }
