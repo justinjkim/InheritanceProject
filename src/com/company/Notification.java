@@ -12,4 +12,18 @@ public class Notification {
         this.body = body;
         this.createdAt = LocalDateTime.now();
     }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    
 }
