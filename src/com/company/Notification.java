@@ -10,5 +10,6 @@ public class Notification {
     public Notification(String subject, String body) {
         this.subject = subject;
         this.body = body;
+        this.createdAt = LocalDateTime.now();
     }
 }
