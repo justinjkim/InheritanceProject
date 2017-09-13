@@ -20,6 +20,33 @@ public class EmailNotification extends Notification {
         return smtpProvider;
     }
 
+    public String setStatus(String status) {
+        super.status = status;
+        return super.status;
+    }
+
+    // auto-generated
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        EmailNotification that = (EmailNotification) o;
+
+        if (recipient != null ? !recipient.equals(that.recipient) : that.recipient != null) return false;
+        return smtpProvider != null ? smtpProvider.equals(that.smtpProvider) : that.smtpProvider == null;
+    }
+
+    // auto-generated
+    @Override
+    public int hashCode() {
+        int result = recipient != null ? recipient.hashCode() : 0;
+        result = 31 * result + (smtpProvider != null ? smtpProvider.hashCode() : 0);
+        return result;
+    }
+
+    
+
     @Override
     public void transport() throws NoTransportException {
         // super.transport(); do I need this?
@@ -28,5 +55,12 @@ public class EmailNotification extends Notification {
         System.out.println(super.getBody());
         System.out.println(getRecipient());
         System.out.println(getSmtpProvider());
+    }
+
+    @Override
+    public String printText(String text) {
+        System.out.println("Some more text after the override.");
+        return super.printText(text);
+
     }
 }
