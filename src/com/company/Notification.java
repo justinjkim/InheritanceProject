@@ -25,5 +25,7 @@ public class Notification {
         return body;
     }
 
-    
+    public void transport() throws NoTransportException {
+        
+    }
 }
