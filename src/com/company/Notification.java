@@ -26,6 +26,6 @@ public class Notification {
     }
 
     public void transport() throws NoTransportException {
-        
+
     }
 }
