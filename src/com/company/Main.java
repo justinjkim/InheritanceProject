@@ -10,8 +10,16 @@ public class Main {
         TextNotification textNotification = new TextNotification("Hey", "Dinner at 8?", "Deanna", "Verizon");
         emailNotification.transport();
         textNotification.transport();
+
         emailNotification.setStatus("bad");
-        emailNotification.printText("Well, this is interesting");
+
+        try {
+            emailNotification.printText("Well, this is interesting");
+
+        }
+        catch (StackOverflowError error) {
+            System.out.println("stack overflow like crazy");;
+        }
 
         Object emailNotificationClone = emailNotification.clone();
         emailNotification.equals(emailNotificationClone);

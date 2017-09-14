@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class Notification {
@@ -12,7 +13,7 @@ public class Notification {
         this.subject = subject;
         this.body = body;
         this.createdAt = LocalDateTime.now();
-        this.status = "Good";
+
     }
 
     public LocalDateTime getCreatedAt() {
@@ -36,7 +37,7 @@ public class Notification {
         return text;
     }
 
-    public void transport() throws NoTransportException {
-
+    public void transport() throws NoTransportException { // forewarns there may be a NoTransportException; "BEWARE...proceed at own risk"
+        // hmm what is supposed to go here?
     }
 }
