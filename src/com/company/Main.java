@@ -10,5 +10,10 @@ public class Main {
         TextNotification textNotification = new TextNotification("Hey", "Dinner at 8?", "Deanna", "Verizon");
         emailNotification.transport();
         textNotification.transport();
+        emailNotification.setStatus("bad");
+        emailNotification.printText("Well, this is interesting");
+
+        Object emailNotificationClone = emailNotification.clone();
+        emailNotification.equals(emailNotificationClone);
     }
 }
