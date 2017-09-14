@@ -45,7 +45,12 @@ public class EmailNotification extends Notification {
         return result;
     }
 
-    
+    @Override
+    protected Object clone() {
+        // return super.clone(); - this is the original return statement automatically generated
+        // I'm not sure if I understand the directions clearly, but I think I'm supposed to create a new instance? sorry, the code below is highlighted in red, not sure what it's asking...
+        return new EmailNotification(String subject, String body, String recipient, String smtpProvider);
+    }
 
     @Override
     public void transport() throws NoTransportException {
