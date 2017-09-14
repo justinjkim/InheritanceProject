@@ -8,6 +8,7 @@ public class TextNotification extends Notification {
         super(subject, body);
         this.recipient = recipient;
         this.smsProvider = smsProvider;
+        this.printText("TextNotification, printing from a superclass method?");
     }
 
     public String getRecipient() {
